@@ -1,0 +1,77 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: rgb(82, 82, 82);
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./trees-8173531_1280.jpg) center/cover;
+}
+form {
+  width: 50%;
+  min-width: 380px;
+  max-width: 600px;
+  background: white;
+  display: grid;
+  grid-template-rows: repeat(4, 104px);
+  padding: 60px 45px 30px;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgb(0, 195, 255);
+  position: relative;
+}
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: rgb(0, 195, 255) 2px 2px 10px;
+}
+input[type="text"] {
+  margin: 7px 0 7px;
+  border: 1px solid transparent;
+  background: rgb(235, 244, 242);
+  height: 36px;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  transition: 0.2s;
+}
+input[type="text"]:focus {
+  border: 1px solid rgb(0, 195, 255);
+}
+
+ul li:hover:after {
+  content: "(terminé)";
+  opacity: 0;
+  font-size: 1.1rem;
+  color: rgb(0, 195, 255);
+  font-style: italic;
+  animation: pseudoClassAnim 1s forwards;
+}
+
+li.checked:before {
+  content: "\2611";
+  padding: 10px;
+  font-size: 1.2rem;
+  color: rgb(0, 195, 255);
+}
+li.checked:hover:after {
+  content: "(supprimer)";
+  font-size: 1.1rem;
+  color: rgb(0, 195, 255);
+  opacity: 0;
+}
+
+@keyframes pseudoClassAnim {
+  to {
+    opacity: 1;
+  }
+}
